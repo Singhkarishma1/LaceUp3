@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <p><p class="fst">L</p>aceUp</p>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">SignIn/SignUp</a></li>
+                <li>
+                    <div class="profile-icon">
+                        <a href="profile.html">
+                            <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="Profile" style="height: 32px; width: 32px; border-radius: 50%;" >
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="cart-section">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+<div class="cart-total">
+    <h3>Total: $<span id="total-price">0.00</span></h3>
+    <button id="place-order" class="order-button">Place Order</button>
+</div>
+
+    </section>
+
+    <script src="cart.js"></script>
+</body>
+</html>
