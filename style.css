@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
+
+
+/* Body */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* layout */
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+
+/* Navbar */
+header{
+  height: 832px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 43px;
+}
+ .fst{
+  color: #ff4747;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.right ul {
+  display: flex;
+  gap: 24px;
+  
+}
+
+.right ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.right ul li span {
+  padding: 0 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.right ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar{
+  background-color: #444;
+  background: transparent;
+  margin-bottom: 245px;
+  margin-top: -230px;
+}
+
+.container {
+  width: 85%;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.container > .btn {
+  margin-top: 2rem;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  background-color: var(--clr-accent, rgb(242, 35, 70));
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* hero section */
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem); /* responsive font */
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 15rem 0;
+  color: white;
+  background: #222; /* fallback if blend mode is not supported */
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(https://github.com/kevin-powell/shoes/blob/master/img/shoe-3.png?raw=true),
+      radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+}
+
+
+
+/* Bestsellers Section */
+.bestsellers {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.bestsellers h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Product Filters */
+.product-filters {
+  margin-bottom: 20px;
+}
+
+.product-filters .filter {
+  background-color: #ff4747;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.product-filters .filter.active,
+.product-filters .filter:hover {
+  background-color: #e04343;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Product Info */
+.product-info {
+  margin-top: 10px;
+}
+
+.category {
+  font-size: 12px;
+  color: #555;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  font-size: 18px;
+  color: #ff4747;
+}
+
+.discounted {
+  color: #ff4747;
+  font-weight: bold;
+}
+
+.original {
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+/* Footer starts here */
+footer {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 40px 20px;
+}
+
+/* Footer Gallery */
+.footer-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+  padding: 20px;
+}
+
+.footer-gallery img {
+  width: 170px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Footer Main Content */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer-logo{
+  padding:0px
+}
+
+.footer-logo h2 {
+  font-size: 32px;
+  color: #ff4747;
+  font-weight: bold;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Footer Section Titles */
+.footer-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #ff4747;
+  margin-top: 5px;
+}
+
+/* Footer Links */
+.footer-section p,
+.footer-section ul {
+  margin: 10px 0;
+  color: #555;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.footer-section ul li a:hover {
+  color: #ff4747;
+}
+
+/* Social Icons */
+.social-icons a {
+  
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Newsletter Form */
+.footer-section form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.footer-section button {
+  padding: 10px 20px;
+  background-color: #ff4747;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-section button:hover {
+  background-color: #e04343;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-bottom .back-to-top {
+  color: #ff4747;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.footer-bottom .back-to-top:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items */
+    
+  }
+  
+  .right ul {
+    flex-direction: row; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to start */
+    width: 60%; /* Take full width */
+    gap: 10px; /* Add some space between items */
+  }
+
+  .right ul li {
+    margin-bottom: 10px; /* Add some space between items */
+  }
+
+  .product-grid {
+    flex-direction: column; /* Stack product cards vertically on small screens */
+  }
+
+  .product-card {
+    width: 100%; /* Take full width for cards */
+    margin-bottom: 20px; /* Add space between cards */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* Single column for footer on small screens */
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr; /* Single column for footer info */
+  }
+
+  .footer-gallery img {
+    width: 100%; /* Make gallery images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  right ul {
+    flex-direction: row; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to start */
+    width: 30%; /* Take full width */
+    gap: 10px; /* Add some space between items */
+  }
+
+  .primary-title {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .bestsellers h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .product-filters .filter {
+    padding: 8px 16px; /* Adjust padding for buttons */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .footer-section input[type="email"] {
+    width: 60%; /* Adjust input width for mobile */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack footer items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+  }
+}
