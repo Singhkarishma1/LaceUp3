@@ -102,3 +102,16 @@ document.getElementById('place-order').addEventListener('click', function() {
 
 // Initial rendering of cart items
 renderCartItems();
+
+
+
+
+// about us and contact to move to footer
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
