@@ -17,11 +17,10 @@ function loadCartItems() {
         cartItem.classList.add("cart-item");
 
         cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-            <div class="cart-item-details">
+            
                 <span>${item.name} (x${item.quantity})</span>
                 <span>$${itemTotal.toFixed(2)}</span>
-            </div>
+            
             <button onclick="removeFromCart('${item.name}')">Remove</button>
         `;
         cartItemsContainer.appendChild(cartItem);
