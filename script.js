@@ -18,6 +18,7 @@ function addToCart(productName, productPrice) {
         // Otherwise, add it to the cart
         cart.push(product);
     }
+    localStorage.setItem('cart', JSON.stringify(cart));
 
     // Update the cart count display
     updateCartCount();
@@ -43,70 +44,9 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 });
 
 
-function addToCart(productName, productPrice) {
-    const product = {
-        name: productName,
-        price: parseFloat(productPrice),
-        quantity: 1
-    };
-
-    const existingProductIndex = cart.findIndex(item => item.name === product.name);
-
-    if (existingProductIndex > -1) {
-        cart[existingProductIndex].quantity += 1;
-    } else {
-        cart.push(product);
-    }
-
-    // Save cart to local storage
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-}
 
 
-// Retrieve cart data from local storage
-let carti = JSON.parse(localStorage.getItem('cart')) || [];
-const cartItemsContainer = document.getElementById('cart-items');
-const totalPriceDisplay = document.getElementById('total-price');
-
-// Function to render cart items
-function renderCartItems() {
-    cartItemsContainer.innerHTML = ''; // Clear the container
-    let totalPrice = 0; // Initialize total price
-
-    // Iterate over cart items and create elements
-    cart.forEach(item => {
-        const cartItem = document.createElement('div');
-        cartItem.classList.add('cart-item');
-        cartItem.innerHTML = `
-            <h3>${item.name} - $${item.price.toFixed(2)} (Qty: ${item.quantity})</h3>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-        totalPrice += item.price * item.quantity; // Update total price
-    });
-
-    totalPriceDisplay.innerText = totalPrice.toFixed(2); // Display total price
-}
-
-// Event listener for the place order button
-document.getElementById('place-order').addEventListener('click', function() {
-    if (cart.length === 0) {
-        alert('Your cart is empty!');
-    } else {
-        alert('Order placed successfully!');
-        cart = []; // Clear cart after order
-        localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
-        renderCartItems(); // Refresh cart display
-    }
-});
-
-// Initial rendering of cart items
-renderCartItems();
-
-
-
-
-// about us and contact to move to footer
+// about us and contact
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
