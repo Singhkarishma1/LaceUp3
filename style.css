@@ -98,9 +98,9 @@ nav {
 .btn {
   display: inline-block;
   text-decoration: none;
-  color: var(--clr-text, #fff);
+  color:white;
   font-weight: 700;
-  background-color: var(--clr-accent, rgb(242, 35, 70));
+  background-color: rgb(242, 35, 70);
   text-transform: uppercase;
   font-size: 1.125rem;
   padding: 0.5rem 1.25rem;
@@ -111,7 +111,7 @@ nav {
 .btn:hover,
 .btn:focus {
   transform: scale(1.1);
-  opacity: 0.9;
+  
 }
 
 /* hero section */
@@ -139,10 +139,12 @@ nav {
   background: #222; /* fallback if blend mode is not supported */
 }
 
+
+/* responsive time */
 @supports (background-blend-mode: multiply) {
   .hero {
     background: url(https://github.com/kevin-powell/shoes/blob/master/img/shoe-3.png?raw=true),
-      radial-gradient(#444, #111);
+      radial-gradient(#a29e9e, #929090);
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-repeat: no-repeat;
